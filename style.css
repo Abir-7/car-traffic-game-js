@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(47, 22, 160);
+}
+
+.road {
+  box-sizing: border-box;
+  background-image: url("road.png");
+  background-size: 100% 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+  grid-template-rows: repeat(14, 50px);
+  position: relative;
+  padding: 10px;
+
+}
+
+
+
+@media (min-width: 400px) and (max-width: 500px) {
+  .road {
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: repeat(14, 50px);
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.container h3 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  background-color: rgb(241, 144, 17);
+  padding: 5px 7px;
+  font-weight: 900;
+}
+.container h2 {
+  position: absolute;
+  top: 0%;
+  left: 82px;
+  transform: translate(-50%, -50%);
+  color: red;
+  font-size: 20px;
+  padding: 5px 7px;
+  font-weight: 900;
+}
+
+.container button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  background-color: rgb(241, 144, 17);
+  padding: 5px 7px;
+  font-weight: 900;
+  font-size: larger;
+}
+
+.control {
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+ gap: 0 70px;
+  background-color: rgb(17, 23, 114);
+}
+.up {
+  text-align: center;
+  grid-column: span 2;
+}
+.btn {
+
+  border-radius: 10px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  border: none;
+  background-color: rgb(241, 144, 17);
+}
+.btn:hover {
+  background-color: rgb(209, 124, 12);
+}
+
+.car {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  width: 50px;
+  grid-row: 13;
+  grid-column: 2;
+}
+.car img {
+  width: 100%;
+}
+.car2 {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 50px;
+  grid-row: 13;
+  grid-column: 6;
+
+  transition: all 0.5s ease;
+}
+.car2 img {
+  width: 100%;
+}
+
+.car3 {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 50px;
+  grid-row: 13;
+  grid-column: 6;
+  transition: all 0.5s ease;
+}
+.car3 img {
+  width: 100%;
+}
+@media (max-width: 399px) {
+    .road {
+      grid-template-columns: repeat(7, 35px);
+      grid-template-rows: repeat(14, 35px);
+      padding-bottom: 20px;
+    }
+  
+    .car img {
+      width: 80%;
+   margin-right: 16px;
+    }
+    .car3 img {
+        width: 80%;
+        margin-right: 16px;
+      }
+
+      .car2 img {
+        width: 80%;
+        margin-right: 16px;
+      }
+  }
